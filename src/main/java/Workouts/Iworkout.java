@@ -1,8 +1,8 @@
 package Workouts;
 
 public interface Iworkout {
-    void prompt();
-    void workoutMath();
-    void getDescription();
+    Double getTime();
+    Double getWeight();
+    String getDescription();
 
 }

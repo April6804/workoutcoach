@@ -1,3 +1,4 @@
+
 import Workouts.*;
 
 import java.util.*;
@@ -47,8 +48,8 @@ public class InputMenu {
         switch (in.nextInt()) {
             case 1:
                 System.out.println("You picked circuit training");
-                new CircuitTraining().prompt();
-                new CircuitTraining().workoutMath();
+                new CircuitTraining().getTime();
+                new CircuitTraining().getWeight();
                 new CircuitTraining().getDescription();
                 break;
 
