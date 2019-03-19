@@ -1,4 +1,4 @@
-package Workouts;
+package WorkoutCoach.Workouts;
 
 public class Run {
 }

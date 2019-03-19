@@ -17,8 +17,8 @@ public class CircuitTraining implements Iworkout {
         Scanner a = new Scanner(System.in);
 
         System.out.println("How much time do you have (in minutes)?");
-        time = a.nextDouble();
-        return time;
+        this.time = a.nextDouble();
+        return this.time;
     }
     public Double getWeight(){
         Scanner b = new Scanner(System.in);

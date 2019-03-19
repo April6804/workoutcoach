@@ -1,5 +1,4 @@
-
-import Workouts.*;
+package Workouts;
 
 import java.util.*;
 
@@ -41,16 +40,14 @@ public class InputMenu {
     }
 
 
-    public void IndoorsMenu() {
+    public Iworkout IndoorsMenu() {
         Scanner in = new Scanner(System.in);
         IndoorDisplayMenu();
-
+        Iworkout ct = null;
         switch (in.nextInt()) {
             case 1:
                 System.out.println("You picked circuit training");
-                new CircuitTraining().getTime();
-                new CircuitTraining().getWeight();
-                new CircuitTraining().getDescription();
+                ct = new CircuitTraining();
                 break;
 
             case 2:
@@ -62,6 +59,10 @@ public class InputMenu {
                 System.err.println("Unrecognized option");
                 break;
         }
+        ct.getTime();
+        ct.getWeight();
+        ct.getDescription();
+        return ct;
     }
 
     public void OutsideDisplayMenu() {

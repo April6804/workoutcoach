@@ -1,4 +1,4 @@
-import Workouts.CircuitTraining;
+package Workouts;
 
 
 import java.io.IOException;
