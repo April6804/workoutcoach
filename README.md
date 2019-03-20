@@ -5,20 +5,10 @@ The Louisville Workout Coach App can guide a user to a specific workout based of
 This java app runs with version 11 of the java JDK.
 
 ## Installation
-1. Create a Folder
-
-In your terminal type:
+1. Create a Folder: In your terminal type:
 `mkdir LouisvilleWorkout && cd LouisvilleWorkout`
-2. Clone the Repository
-
-In your terminal type:
+2. Clone the Repository: In your terminal type:
 `git clone https://github.com/April6804/workoutcoach.git`
-3. Open project with Intellij
-
-Maven files need to be imported. Look for the popup that asks you to import the changes.
-4. Build project
-
-In Intellij, click on Build then Build Project. Or click on the Build icon.
-5. Run Application
-
-Go to `/src/main/java/Go.java` and run Go.java
+3. Open project with Intellij: Maven files need to be imported. Look for the popup that asks you to import the changes.
+4. Build project: In Intellij, click on Build then Build Project. Or click on the Build icon.
+5. Run Application: Go to `/src/main/java/Go.java` and run Go.java
