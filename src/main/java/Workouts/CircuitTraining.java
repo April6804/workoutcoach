@@ -1,16 +1,16 @@
 package Workouts;
 
+import java.io.IOException;
 import java.util.Scanner;
 
-public class CircuitTraining implements Iworkout {
-
+public class CircuitTraining implements Workout_Interface {
+    static String instructions;
     double time;
     double weight;
     double hours;
     double round;
     double set;
     double calories;
-    String instructions;
 
 
     public Double getTime() {
@@ -23,25 +23,26 @@ public class CircuitTraining implements Iworkout {
     public Double getWeight(){
         Scanner b = new Scanner(System.in);
 
-        System.out.println("How much do you weight?");
+        System.out.println("How much do you weigh?");
         weight = b.nextDouble();
         return weight;
     }
 
-    public String getDescription(){
-
-        System.out.println("time: " + time + " weight: " + weight);
+    public String getDescription() throws IOException {
 
         hours = time/60;
         round = (time-4)/2;
+        //Create 2 rounds and reserve 2 minutes of rest per round
         set = Math.round(round/3);
         calories = Math.round(((weight/2.2)*6)* hours);
-        /* weight in kilograms (2.2) multiplied by estimated MET (6) for vigorous exercise, then multiplied by duration of workout */
+        //Weight in kilograms (2.2) multiplied by estimated MET (6) for vigorous exercise, then multiplied by duration of workout
+        System.out.println("\n");
+        instructions ="Circuit Training Exercise:\n---------------------------\nYou will have " + round + " minutes per round, " + set + " minutes for each exercise, with a 2 minute rest after each round." +
+                "\nEach " + round + " minute round consists of three sets of exercises. Each set will be " + set + " minutes.\n - The first exercise will be squat jumps. \n - The second exercise will be sit-ups. \n - The third exercise will be pull-ups. \nAfter each round you will rest 2 minutes." +
+                "\nYou will have burned around " + calories + " calories. Great job!";
 
-        instructions = round + " minutes per round, " + set + " minutes for each exercise, with a 2 minute rest after each round." +
-                "\nEach " + round + " minute round consists of three sets of exercises. Each set will be " + set + " minutes.\nThe first exercise will be squat jumps. \nThe second exercise will be sit-ups. \nThe third exercise will be pull-ups. \nAfter each round you will rest 2 minutes." +
-                "\nAfter your workout you will have burned around " + calories + " calories.";
-        //System.out.println(instructions);
+        new PrintExercise();
+        //Send instructions to be printed to a file
         return instructions;
     }
 }

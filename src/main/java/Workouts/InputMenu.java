@@ -1,6 +1,8 @@
 package Workouts;
 
+import java.io.IOException;
 import java.util.*;
+
 
 
 public class InputMenu {
@@ -11,7 +13,7 @@ public class InputMenu {
     }
 
 
-    public InputMenu() {
+    public InputMenu() throws IOException {
         Scanner in = new Scanner(System.in);
         DisplayMenu();
 
@@ -40,10 +42,10 @@ public class InputMenu {
     }
 
 
-    public Iworkout IndoorsMenu() {
+    public Workout_Interface IndoorsMenu() throws IOException {
         Scanner in = new Scanner(System.in);
         IndoorDisplayMenu();
-        Iworkout ct = null;
+        Workout_Interface ct = null;
         switch (in.nextInt()) {
             case 1:
                 System.out.println("You picked circuit training");
@@ -52,7 +54,7 @@ public class InputMenu {
 
             case 2:
                 System.out.println("You picked one mile run");
-                //Treadmill();
+                ct = new Tredmill();
                 break;
 
             default:
@@ -63,6 +65,7 @@ public class InputMenu {
         ct.getWeight();
         ct.getDescription();
         return ct;
+
     }
 
     public void OutsideDisplayMenu() {
