@@ -9,7 +9,7 @@ public class Treadmill implements Workout_Interface {
     double weight;
     double hours;
     double calories;
-    static String instructions;
+    String instructions;
 
 
     public Double getTime() {
@@ -29,17 +29,18 @@ public class Treadmill implements Workout_Interface {
 
     public String getDescription() throws IOException {
 
-        hours = time/60;
         double run = Math.round(time-5);
-        //Take out 5 minute cool down
+        //Take out 5 minutes for a cool down
 
+        hours = time/60;
         calories = Math.round(((weight/2.2)*6)* hours);
-        // Your weight in kilograms (2.2) multiplied by estimated MET (6) for vigorous exercise, then multiplied by duration of workout
+        // Calculate calories burned:
+        // User's weight in kilograms (2.2) multiplied by estimated MET (6) for vigorous exercise, then multiplied by duration of workout
 
         System.out.println("\n");
-        instructions = "Indoor Run:\n---------------------------\nRun on the treadmill for " + run + ". Then walk for 5 minutes.\nAim for a 20 minute per hour run pace. Make sure you stretch before you run.\nAfter your run you will have burned around " + calories + " calories. Great job!";
+        instructions = "Indoor Run:\n---------------------------\nRun on the treadmill for " + run + " minutes. Then walk for 5 minutes.\nAim for a 20 minute per hour run pace. Make sure you stretch before you run.\nAfter your run you will have burned around " + calories + " calories. Great job!";
 
-        new PrintExercise();
+        new PrintExercise(instructions);
         //Send instructions to be printed to a file
         return instructions;
     }
