@@ -40,8 +40,6 @@ public class Treadmill implements Workout_Interface {
         System.out.println("\n");
         instructions = "Indoor Run:\n---------------------------\nRun on the treadmill for " + run + " minutes. Then walk for 5 minutes.\nAim for a 20 minute per hour run pace. Make sure you stretch before you run.\nAfter your run you will have burned around " + calories + " calories. Great job!";
 
-        new PrintExercise(instructions);
-        //Send instructions to be printed to a file
         return instructions;
     }
 }

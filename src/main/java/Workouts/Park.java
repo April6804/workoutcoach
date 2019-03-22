@@ -45,8 +45,6 @@ public class Park implements Workout_Interface {
                 "\nEach " + round + " minute round consists of three sets of exercises. Each set will be " + set + " minutes.\n - The first exercise will be squat jumps. \n - The second exercise will be sit-ups. \n - The third exercise will be pull-ups. \nAfter each round you will rest 2 minutes." +
                 "\nYou will have burned around " + calories + " calories. Great job!";
 
-        new PrintExercise(instructions);
-        //Send instructions to be printed to a file
         return instructions;
     }
 }

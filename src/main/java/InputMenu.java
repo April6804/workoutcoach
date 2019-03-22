@@ -64,6 +64,7 @@ public class InputMenu {
         inside.getTime();
         inside.getWeight();
         inside.getDescription();
+        new PrintExercise(inside.getDescription());
         return inside;
 
     }
@@ -98,6 +99,8 @@ public class InputMenu {
         outside.getTime();
         outside.getWeight();
         outside.getDescription();
+        new PrintExercise(outside.getDescription());
+
         return outside;
     }
 }
