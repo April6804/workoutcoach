@@ -3,7 +3,7 @@ package Workouts;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class CircuitTraining implements Workout_Interface {
+public class Park implements Workout_Interface {
 
     double time;
     double weight;
@@ -41,7 +41,7 @@ public class CircuitTraining implements Workout_Interface {
         // User's weight in kilograms (2.2) multiplied by estimated MET (6) for vigorous exercise, then multiplied by duration of workout
 
         System.out.println("\n");
-        instructions ="Circuit Training Exercise:\n---------------------------\nYou will have " + round + " minutes per round, " + set + " minutes for each exercise, with a 2 minute rest after each round." +
+        instructions ="Workout in the Park:\n---------------------------\nYou will have " + round + " minutes per round, " + set + " minutes for each exercise, with a 2 minute rest after each round." +
                 "\nEach " + round + " minute round consists of three sets of exercises. Each set will be " + set + " minutes.\n - The first exercise will be squat jumps. \n - The second exercise will be sit-ups. \n - The third exercise will be pull-ups. \nAfter each round you will rest 2 minutes." +
                 "\nYou will have burned around " + calories + " calories. Great job!";
 

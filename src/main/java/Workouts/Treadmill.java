@@ -3,13 +3,11 @@ package Workouts;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class CircuitTraining implements Workout_Interface {
+public class Treadmill implements Workout_Interface {
 
     double time;
     double weight;
     double hours;
-    double round;
-    double set;
     double calories;
     String instructions;
 
@@ -31,19 +29,16 @@ public class CircuitTraining implements Workout_Interface {
 
     public String getDescription() throws IOException {
 
-        hours = time/60;
-        round = (time-4)/2;
-        //Create 2 rounds and reserve 2 minutes of rest per round
+        double run = Math.round(time-5);
+        //Take out 5 minutes for a cool down
 
-        set = Math.round(round/3);
+        hours = time/60;
         calories = Math.round(((weight/2.2)*6)* hours);
         // Calculate calories burned:
         // User's weight in kilograms (2.2) multiplied by estimated MET (6) for vigorous exercise, then multiplied by duration of workout
 
         System.out.println("\n");
-        instructions ="Circuit Training Exercise:\n---------------------------\nYou will have " + round + " minutes per round, " + set + " minutes for each exercise, with a 2 minute rest after each round." +
-                "\nEach " + round + " minute round consists of three sets of exercises. Each set will be " + set + " minutes.\n - The first exercise will be squat jumps. \n - The second exercise will be sit-ups. \n - The third exercise will be pull-ups. \nAfter each round you will rest 2 minutes." +
-                "\nYou will have burned around " + calories + " calories. Great job!";
+        instructions = "Indoor Run:\n---------------------------\nRun on the treadmill for " + run + " minutes. Then walk for 5 minutes.\nAim for a 20 minute per hour run pace. Make sure you stretch before you run.\nAfter your run you will have burned around " + calories + " calories. Great job!";
 
         new PrintExercise(instructions);
         //Send instructions to be printed to a file
