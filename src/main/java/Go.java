@@ -1,4 +1,3 @@
-import Workouts.*;
 import tk.plogitech.darksky.forecast.ForecastException;
 
 import java.io.IOException;

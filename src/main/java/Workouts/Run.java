@@ -40,8 +40,6 @@ public class Run implements Workout_Interface {
         System.out.println("\n");
         instructions = "Outdoor Run:\n---------------------------\nRun around your neighborhood or park for " + run + " minutes. Then walk for 5 minutes.\nAim for a 20 minute per hour run pace. Make sure you stretch before you run.\nWear bright colors and take a friend with you so you don't get kidnapped!\nAfter your run you will have burned around " + calories + " calories. Great job!";
 
-        new PrintExercise(instructions);
-        //Send instructions to be printed to a file
         return instructions;
     }
 }
