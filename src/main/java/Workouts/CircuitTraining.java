@@ -2,7 +2,6 @@ package Workouts;
 
 public class CircuitTraining extends Exercise {
 
-
     public String getDescription() {
 
         double hours = time / 60;
@@ -13,6 +12,7 @@ public class CircuitTraining extends Exercise {
         double calories = Math.round(((weight / 2.2) * 6) * hours);
         // Calculate calories burned:
         // User's weight in kilograms (2.2) multiplied by estimated MET (6) for vigorous exercise, then multiplied by duration of workout
+
 
         System.out.println("\n");
         String instructions = "Circuit Training Exercise:\n---------------------------\nYou will have " + round + " minutes per round, " + set + " minutes for each exercise, with a 2 minute rest after each round." +

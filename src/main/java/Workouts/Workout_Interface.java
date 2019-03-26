@@ -7,6 +7,5 @@ public interface Workout_Interface {
 
     String getDescription();
 
-
 }
 

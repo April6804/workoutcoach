@@ -2,7 +2,6 @@ package Workouts;
 
 public class Run extends Exercise {
 
-
     public String getDescription() {
 
         double run = Math.round(time - 5);

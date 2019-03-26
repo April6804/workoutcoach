@@ -18,13 +18,15 @@ public class Park extends Exercise {
             //Create 2 rounds and reserve 2 minutes of rest per round
         }
 
-        double set = Math.round(round / 3);
         double calories = Math.round(((weight / 2.2) * 6) * hours);
+        double set = Math.round(round/3);
+        calories = Math.round(((weight/2.2)*6)* hours);
         // Calculate calories burned:
         // User's weight in kilograms (2.2) multiplied by estimated MET (6) for vigorous exercise, then multiplied by duration of workout
 
         System.out.println("\n");
         String instructions = "Workout in the Park:\n---------------------------\nYou will have " + numberOfRounds + " rounds and " + round + " minutes per round, " + set + " minutes for each exercise, with a 2 minute rest after each round." +
+
                 "\nEach " + round + " minute round consists of three sets of exercises. Each set will be " + set + " minutes." +
                 "\n - The first exercise will be declined push ups. \n - The second exercise will be bench dips with toe touch. \n - The third exercise will be single leg lunges. \nAfter each round you will rest for 2 minutes." +
                 "\nFor the declined push ups: \nFind a bench, step, or some other solid object you can rest your feet on and place your hands underneath your shoulders. Lower yourself down till your head is a few inches from the ground and press back up. " +
