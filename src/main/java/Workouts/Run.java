@@ -13,7 +13,7 @@ public class Run extends Exercise {
         // User's weight in kilograms (2.2) multiplied by estimated MET (6) for vigorous exercise, then multiplied by duration of workout
 
         System.out.println("\n");
-        String instructions = "Outdoor Run:\n---------------------------\nRun around your neighborhood or park for " + run + " minutes. Then walk for 5 minutes.\nAim for a 20 minute per hour run pace. Make sure you stretch before you run.\nWear bright colors and take a friend with you so you don't get kidnapped!\nAfter your run you will have burned around " + calories + " calories. Great job!";
+        String instructions = "Outdoor Run:\n---------------------------\nRun around your neighborhood or park for " + run + " minutes. Then walk for 5 minutes.\nAim for a 14 minute mile pace. Make sure you stretch before you run.\nWear bright colors and take a friend with you so you don't get kidnapped!\nAfter your run you will have burned around " + calories + " calories. Great job!";
 
         return instructions;
     }
